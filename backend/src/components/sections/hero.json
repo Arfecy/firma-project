@@ -12,14 +12,10 @@
       "type": "string",
       "required": true
     },
-    "description": {
-      "type": "string",
-      "required": true
-    },
     "picture": {
       "type": "media",
       "multiple": false,
-      "required": true,
+      "required": false,
       "allowedTypes": [
         "images"
       ]

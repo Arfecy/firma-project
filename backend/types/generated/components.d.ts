@@ -158,8 +158,7 @@ export interface SectionsHero extends Schema.Component {
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
-    description: Attribute.String & Attribute.Required;
-    picture: Attribute.Media<'images'> & Attribute.Required;
+    picture: Attribute.Media<'images'>;
     buttons: Attribute.Component<'links.button-link', true>;
   };
 }
@@ -339,11 +338,6 @@ export interface LayoutFooter extends Schema.Component {
     menuLinks: Attribute.Component<'links.link', true>;
     legalLinks: Attribute.Component<'links.link', true>;
     socialLinks: Attribute.Component<'links.social-link', true>;
-    categories: Attribute.Relation<
-      'layout.footer',
-      'oneToMany',
-      'api::category.category'
-    >;
   };
 }
 
@@ -376,11 +370,6 @@ export interface ElementsPlan extends Schema.Component {
     isRecommended: Attribute.Boolean;
     price: Attribute.Decimal;
     pricePeriod: Attribute.String;
-    product_features: Attribute.Relation<
-      'elements.plan',
-      'oneToMany',
-      'api::product-feature.product-feature'
-    >;
   };
 }
 

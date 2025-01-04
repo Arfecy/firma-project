@@ -3,11 +3,11 @@ import "./globals.css";
 import { getStrapiMedia, getStrapiURL } from "./utils/api-helpers";
 import { fetchAPI } from "./utils/fetch-api";
 
+import { FALLBACK_SEO } from "@/app/[lang]/utils/constants";
 import { i18n } from "../../../i18n-config";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import {FALLBACK_SEO} from "@/app/[lang]/utils/constants";
 
 
 async function getGlobal(lang: string): Promise<any> {
@@ -93,7 +93,6 @@ export default async function RootLayout({
           logoUrl={footerLogoUrl}
           logoText={footer.footerLogo.logoText}
           menuLinks={footer.menuLinks}
-          categoryLinks={footer.categories.data}
           legalLinks={footer.legalLinks}
           socialLinks={footer.socialLinks}
         />
